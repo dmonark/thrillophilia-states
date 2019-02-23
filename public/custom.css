@@ -14,11 +14,17 @@ margin-bottom: 30px;
 	width: 10%; 
 	opacity: 1
 }
+.nearby-corousel-indicator{
+	color: #f16f32; 
+	width: 10%; 
+	opacity: 1;
+	margin-top: -70px;
+}
 .indicator-icon{
 	padding-top:180px; 
 	font-size:50px;
 }
-#attractions-btn{
+.show-all-btn{
 	font-size: 16px; 
 	border: 1px solid #f16f30; 
 	padding: 8px 15px; 
