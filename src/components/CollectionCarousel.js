@@ -11,7 +11,7 @@ class CollectionCarousel extends Component {
 						{this.props.title}						
 						</p>
 					</div>
-					<div id="carousel-nearby-destinations" className="carousel slide" data-interval="false" data-ride="carousel">
+					<div id={this.props.carouselName} className="carousel slide" data-interval="false" data-ride="carousel">
 						<div className="carousel-inner">
 							<div className="item active">
 								<div className="col-md-2 col-sm-3 col-lg-2 col-xs-12 nearby-destination-div-no-padding">
@@ -90,12 +90,12 @@ class CollectionCarousel extends Component {
 								</div>
 							</div>
 						</div>
-						<a className="carousel-control left nearby-corousel-indicator" data-slide="prev" href="#carousel-nearby-destinations" style={{backgroundImage: 'none', left: '-90px'}}>
+						<a className="carousel-control left nearby-corousel-indicator" data-slide="prev" href={"#"+this.props.carouselName} style={{backgroundImage: 'none', left: '-90px'}}>
 							<span>
 								<i className="fa fa-angle-left indicator-icon" aria-hidden="true"></i>
 							</span>
 						</a>
-						<a className="carousel-control right nearby-corousel-indicator" data-slide="next" href="#carousel-nearby-destinations" style={{backgroundImage: 'none', right: '-90px'}}>
+						<a className="carousel-control right nearby-corousel-indicator" data-slide="next" href={"#"+this.props.carouselName} style={{backgroundImage: 'none', right: '-90px'}}>
 							<span>
 								<i className="fa fa-angle-right indicator-icon" aria-hidden="true"></i>
 							</span>
