@@ -1,0 +1,27 @@
+.desc-class{
+overflow:hidden; font-size:16px; line-height: 1.5em; height: 7.5em;}
+}
+#show-more-btn{display: block;
+text-decoration: none;
+color: rgb(241, 111, 50);
+margin-bottom: 30px;
+}
+.carousel-title{
+	font-size: 18px
+}
+.corousel-indicator{
+	color: #f16f32; 
+	width: 10%; 
+	opacity: 1
+}
+.indicator-icon{
+	padding-top:180px; 
+	font-size:50px;
+}
+#attractions-btn{
+	font-size: 16px; 
+	border: 1px solid #f16f30; 
+	padding: 8px 15px; 
+	border-radius:5px; 
+	margin-bottom:20px;
+}
