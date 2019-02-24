@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component }  from 'react';
 import ProductCard from './cards/ProductCard';
+import Slider from "react-slick";
 
 const CarouselActive = function(props) {
 	var carouselSubList = []
@@ -13,43 +14,69 @@ const CarouselActive = function(props) {
 	return carouselSubList
 }
 
-const Carousel = function(props) {
-  var carouselList = [];
-	
-	for(var i = 0; i < props.data.length; i++){
-		carouselList.push(
-			<div key={props.keyText+i} className={i === 0 ? "item active": "item"} >
-				<CarouselActive keyText={props.keyText + i} data={props.data[i]} />
-			</div>
-		)
+class Carousel extends Component {
+  
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			slideIndex: 0,
+			updateCount: 0
+		};
 	}
 	
-	return (
-		<div className="container-fluid cards hidden-xs">
-			<div className="row hidden-sm cards mt0">
-				<div className="col-md-12 mb10">
-					<p className="pull-left carousel-title">
-					{props.title}						
-					</p>
+	render(){
+	
+		const settings = {
+			dots: true,
+			infinite: true,
+			speed: 500,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			afterChange: () =>
+				this.setState(state => ({ updateCount: state.updateCount + 1 })),
+			beforeChange: (current, next) => this.setState({ slideIndex: next })
+		};
+			
+		var carouselList = [];
+		
+		for(var i = 0; i < this.props.data.length; i++){
+			carouselList.push(
+				<div key={this.props.keyText+i} className="item" >
+					<CarouselActive keyText={this.props.keyText + i} data={this.props.data[i]} />
 				</div>
-				<div id={props.carouselName} className="carousel slide" data-interval="false" data-ride="carousel">
-					<div className="carousel-inner">
-					{carouselList}
+			)
+		}
+	
+		return (
+			<div className="container-fluid cards hidden-xs">
+				<div className="row hidden-sm cards mt0">
+					<div className="col-md-12 mb10">
+						<p className="pull-left carousel-title">
+						{this.props.title}						
+						</p>
 					</div>
-					<a className="carousel-control left corousel-indicator" data-slide="prev" href={"#"+props.carouselName} style={{backgroundImage: 'none', left: '-90px'}}>
-						<span>
-							<i className="fa fa-angle-left indicator-icon" aria-hidden="true"></i>
-						</span>
-					</a>
-					<a className="carousel-control right corousel-indicator" data-slide="next" href={"#"+props.carouselName} style={{backgroundImage: 'none', right: '-90px'}}>
-						<span>
-							<i className="fa fa-angle-right indicator-icon" aria-hidden="true"></i>
-						</span>
-					</a>
+					<div id={this.props.carouselName} className="carousel slide" data-interval="false" data-ride="carousel">
+						<div className="carousel-inner">
+							<Slider ref={slider => (this.slider = slider)} {...settings}>
+								{carouselList}
+							</Slider>
+						</div>
+						<a className="carousel-control left corousel-indicator" style={{backgroundImage: 'none', left: '-90px'}} onClick={() => this.slider.slickGoTo(this.state.updateCount - 1)}>
+							<span>
+								<i className="fa fa-angle-left indicator-icon" aria-hidden="true"></i>
+							</span>
+						</a>
+						<a className="carousel-control right corousel-indicator" style={{backgroundImage: 'none', right: '-90px'}} onClick={() => this.slider.slickGoTo(this.state.updateCount + 1)}>
+							<span>
+								<i className="fa fa-angle-right indicator-icon" aria-hidden="true"></i>
+							</span>
+						</a>
+					</div>
 				</div>
 			</div>
-		</div>
-	);
+		);
+	}
 }
 
 Carousel.defaultProps = {
@@ -59,8 +86,7 @@ Carousel.defaultProps = {
 			{},
 			{},
 			{}
-		],
-		[
+		],[
 			{},
 			{},
 			{}

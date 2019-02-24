@@ -25,11 +25,11 @@ class App extends Component {
 					<BreadCrumbs />
 					<ArticleDesc />
 					<Recommendations keyText="rec"/>
-					<Carousel title="Things to do in Goa" carouselName="carousel-things" show="4" keyText="things"/>
-					<Carousel title="Goa Tours" carouselName="carousel-tours" show="4" keyText="tours"/>
-					<Carousel title="Rentals in Goa" carouselName="carousel-rentals" show="4" keyText="rentals"/>
-					<Carousel title="Best Places to Stay in Goa" carouselName="carousel-places" show="4" keyText="stay"/>
-					<Carousel title="Events in Goa" carouselName="carousel-events" show="4" keyText="events"/>
+					<Carousel title="Things to do in Goa" carouselName="carousel-things" keyText="things"/>
+					<Carousel title="Goa Tours" carouselName="carousel-tours" keyText="tours"/>
+					<Carousel title="Rentals in Goa" carouselName="carousel-rentals" keyText="rentals"/>
+					<Carousel title="Best Places to Stay in Goa" carouselName="carousel-places" keyText="stay"/>
+					<Carousel title="Events in Goa" carouselName="carousel-events" keyText="events"/>
 					<Attractions />
 					<AskQuestion />
 					<Guides />
