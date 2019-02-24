@@ -1,4 +1,5 @@
 import React from 'react';
+import StarRating from './StarRating';
 
 const BrandReviews = function(props) {
 	return (
@@ -9,9 +10,11 @@ const BrandReviews = function(props) {
 						<div className="row">
 							<div className="col-md-4 col-md-offset-1 col-sm-4">
 								<p>User Reviews</p>
-								<p className="header-review-count clearfix">
-									&nbsp;1250 Reviews
-								</p>
+								<StarRating 
+									rating="4" 
+									classText="header-review-count clearfix"
+									count="1999"
+								/>
 							</div>
 							<div className="col-md-7 col-sm-7">
 								<ul className="brand-logos pull-right clearfix">

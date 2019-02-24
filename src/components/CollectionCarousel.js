@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CollectionCard from './CollectionCard';
+import CollectionCard from './cards/CollectionCard';
 
 class CollectionCarousel extends Component {
   render() {

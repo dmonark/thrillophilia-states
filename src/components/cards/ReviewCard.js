@@ -1,4 +1,5 @@
 import React from 'react';
+import StarRating from './../StarRating';
 
 const ReviewCard = function(props){
 	var imageList = []
@@ -6,13 +7,13 @@ const ReviewCard = function(props){
 	for(var i = 0; i < props.review.images.length; i++){
  		if(i < 7){
 			imageList.push(
-				<li>
+				<li key={props.keyText + i}>
 					<img className="img-responsive" src={props.review.images[i]} alt="User Review Images"/>
 				</li>
 			)
 		} else {
 			imageList.push(
-				<li>
+				<li key={props.keyText + i}>
 					<img className="img-responsive" src={props.review.images[i]} alt="User Review Images"/>
 					<span className="last-image">+{props.review.images.length - 8}</span>
 				</li>
@@ -30,6 +31,10 @@ const ReviewCard = function(props){
 				<div className="col-md-7 col-sm-7 user-area user-area-no-margin">
 					<p className="user-name">{props.user.name}</p>
 					<p className="user-review-date">{props.review.date}</p>
+					<StarRating 
+						rating={props.review.star} 
+						classText="review"
+					/>
 				</div>
 			</div>
 			<div className="row">
@@ -64,6 +69,7 @@ ReviewCard.defaultProps = {
 	},
 	review: {
 		tour: 'Snorkeling, Sightseeing and Fishing on a Luxury Cruise at Britona',
+		star: 5,
 		date: '11 January 2016',
 		post: 'An unforgettable experience for me. For the first time got a chance to get into snorkeling and see the marine life. Thanks alot guys for an amazing experience.',
 		images: [

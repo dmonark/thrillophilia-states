@@ -6,12 +6,14 @@ import ArticleDesc from './components/ArticleDesc';
 import Recommendations from './components/Recommendations';
 import Carousel from './components/Carousel';
 import Attractions from './components/Attractions';
+import AskQuestion from './components/AskQuestion';
 import Guides from './components/Guides';
 import Reviews from './components/Reviews';
 import Handpicked from './components/Handpicked';
 import CollectionCarousel from './components/CollectionCarousel';
 import TagCollection from './components/TagCollection';
 import QuestionCollection from './components/QuestionCollection';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -22,13 +24,14 @@ class App extends Component {
 					<BrandReviews />
 					<BreadCrumbs />
 					<ArticleDesc />
-					<Recommendations />
-					<Carousel title="Things to do in Goa" carouselName="carousel-things" show="4"/>
-					<Carousel title="Goa Tours" carouselName="carousel-tours" show="4"/>
-					<Carousel title="Rentals in Goa" carouselName="carousel-rentals" show="4"/>
-					<Carousel title="Best Places to Stay in Goa" carouselName="carousel-places" show="4"/>
-					<Carousel title="Events in Goa" carouselName="carousel-events" show="4"/>
+					<Recommendations keyText="rec"/>
+					<Carousel title="Things to do in Goa" carouselName="carousel-things" show="4" keyText="things"/>
+					<Carousel title="Goa Tours" carouselName="carousel-tours" show="4" keyText="tours"/>
+					<Carousel title="Rentals in Goa" carouselName="carousel-rentals" show="4" keyText="rentals"/>
+					<Carousel title="Best Places to Stay in Goa" carouselName="carousel-places" show="4" keyText="stay"/>
+					<Carousel title="Events in Goa" carouselName="carousel-events" show="4" keyText="events"/>
 					<Attractions />
+					<AskQuestion />
 					<Guides />
 					<Reviews />
 					<Handpicked />
@@ -36,12 +39,13 @@ class App extends Component {
 						<CollectionCarousel title="Nearby Getaways from Goa" carouselName="carousel-nearby-destinations"/>
 						<CollectionCarousel title="Goa Experiences" carouselName="carousel-sub-categories"/>
 					</div>
-					<TagCollection title="More Things to do in Goa"/>
-					<TagCollection title="Top Goa Attractions"/>
-					<TagCollection title="Most Popular Places Around Goa"/>
-					<TagCollection title="Listings in Goa"/>
+					<TagCollection title="More Things to do in Goa" keyText = "more"/>
+					<TagCollection title="Top Goa Attractions" keyText="topattraction"/>
+					<TagCollection title="Most Popular Places Around Goa" keyText="popular"/>
+					<TagCollection title="Listings in Goa" keyText="listings"/>
 					<QuestionCollection />
 				</div>
+				<Footer />
       </div>
     );
   }

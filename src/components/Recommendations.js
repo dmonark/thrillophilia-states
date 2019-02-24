@@ -1,13 +1,13 @@
 import React from 'react';
-import ProductCard from './ProductCard';
+import ProductCard from './cards/ProductCard';
 
 const Recommendations = function(props) {
 	var recommendationsList = []
 	
 	for(var i = 0; i < props.data.length; i++) {
 		recommendationsList.push(		
-			<div className="col-md-3 col-sm-4 col-xs-6">
-				<ProductCard />
+			<div className="col-md-3 col-sm-4 col-xs-6" key={props.keyText+i}>
+				<ProductCard keyText={props.keyText + i}/>
 			</div>
 		)		
 	}

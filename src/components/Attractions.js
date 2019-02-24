@@ -1,11 +1,11 @@
 import React from 'react';
-import CustomCard from './CustomCard';
+import CustomCard from './cards/CustomCard';
 
 const Attractions = function(props) {
   var attractionList = [];
 	for(var i = 0; i < props.data.length; i++){
 		attractionList.push(
-			<div className="col-md-3 col-xs-6">
+			<div key={"attraction"+i} className="col-md-3 col-xs-6">
 				<CustomCard cardType="large"/>							
 			</div>
 		)

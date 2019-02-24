@@ -4,7 +4,7 @@ const TagCollection = function(props) {
   var tagsList = []
 	for(var i = 0; i < props.data.length; i++){
 		tagsList.push(
-			<li>
+			<li key={props.keyText + i}>
 				<div className="btn btn-extra-things-to-do">
 					<a href={props.data[i].url}>{props.data[i].name}</a>
 				</div>

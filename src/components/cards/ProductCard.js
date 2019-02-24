@@ -1,10 +1,11 @@
 import React from 'react';
+import StarRating from './../StarRating';
 
 const ProductCard = function(props) {
 	var tagsList = []
 	for(var i = 0; i< props.tags.length; i++){
 		tagsList.push(
-			<div className="name" style={{color: "#fff", background: "purple"}}>{props.tags[i].title}</div>		
+			<div className="name" key={props.keyText + i} style={{color: "#fff", background: "purple"}}>{props.tags[i].title}</div>		
 		)
 	}
 	return (
@@ -31,6 +32,12 @@ const ProductCard = function(props) {
 								<p className="price">
 									<i className="fa fa-inr rupee-symbol"></i> {props.price}
 								</p>
+							</div>
+							<div className="col-md-6 col-sm-6 col-xs-6">
+								<StarRating 
+									rating={props.ratings.star} 
+									classText="review hidden-sm"
+								/>
 							</div>
 						</div>
 						<div className="row">

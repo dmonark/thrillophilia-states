@@ -1,12 +1,12 @@
 import React from 'react';
-import ProductCard from './ProductCard';
+import ProductCard from './cards/ProductCard';
 
 const CarouselActive = function(props) {
 	var carouselSubList = []
 	for(var i = 0; i < props.data.length; i++){
 		carouselSubList.push(
-			<div className="col-md-3 col-sm-4 col-xs-6">
-				<ProductCard />
+			<div key={props.keyText + i} className="col-md-3 col-sm-4 col-xs-6">
+				<ProductCard keyText={props.keyText + i} />
 			</div>
 		)
 	}
@@ -18,8 +18,8 @@ const Carousel = function(props) {
 	
 	for(var i = 0; i < props.data.length; i++){
 		carouselList.push(
-			<div className={i === 0 ? "item active": "item"} >
-				<CarouselActive data={props.data[i]} />
+			<div key={props.keyText+i} className={i === 0 ? "item active": "item"} >
+				<CarouselActive keyText={props.keyText + i} data={props.data[i]} />
 			</div>
 		)
 	}

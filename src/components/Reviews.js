@@ -1,13 +1,13 @@
 import React from 'react';
-import ReviewCard from './ReviewCard';
+import ReviewCard from './cards/ReviewCard';
 
 const Reviews = function(props) {
 	const reviewList = []
 	
 	for(var i = 0; i < props.data.length; i++){
 		reviewList.push(
-			<div className="col-md-4 col-sm-6">
-				<ReviewCard/>							
+			<div className="col-md-4 col-sm-6" key={"review" + i}>
+				<ReviewCard keyText={"review" + i + "img"}/>							
 			</div>
 		)
 	}

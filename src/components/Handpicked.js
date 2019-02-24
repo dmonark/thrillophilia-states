@@ -1,11 +1,11 @@
 import React from 'react';
-import CollectionCard from './CollectionCard';
+import CollectionCard from './cards/CollectionCard';
 
 const Handpicked = function(props) {  
 	var handpickedList = []
 	for(var i = 0; i < props.data.length; i++){
 		handpickedList.push(
-			<div className="col-md-3 handpicked-collections-div-no-padding">
+			<div className="col-md-3 handpicked-collections-div-no-padding" key={"handpicked"+i}>
 				<CollectionCard 
 					src={props.data[i].src}
 					alt={props.data[i].alt}

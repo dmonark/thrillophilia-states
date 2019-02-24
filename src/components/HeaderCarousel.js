@@ -8,7 +8,7 @@ const HeaderCarousel = function(props) {
 					<li className="" data-slide-to="0" data-target="#banner-slider">
 						<span className="carousel-inner-image-1"></span>
 						Home
-						<a className="clearfix listings"></a>
+						<a href="#" className="clearfix listings"></a>
 					</li>
 					<li className="">
 						<a className="indicator-target" href="/states/goa/things-to-do" target="_blank">
@@ -51,7 +51,7 @@ const HeaderCarousel = function(props) {
 					</div>
 					<div className="item">
 						<a href="/states/goa/things-to-do" target="_blank">
-							<img alt="Banner-image-things-to-do" className="img-responsive" src="https://d3u4hzlr7ozpoo.cloudfront.net/assets/banner-image-things-to-do-a273c8e6efb958ca72e3c439a991f2eb.jpg" />
+							<img alt="Banner" className="img-responsive" src="https://d3u4hzlr7ozpoo.cloudfront.net/assets/banner-image-things-to-do-a273c8e6efb958ca72e3c439a991f2eb.jpg" />
 						</a>
 						<div className="carousel-caption">
 							<a href="/states/goa/things-to-do" target="_blank">
@@ -63,7 +63,7 @@ const HeaderCarousel = function(props) {
 					</div>
 					<div className="item">
 						<a href="/states/goa/tours" target="_blank">
-							<img alt="Banner-image-tours" className="img-responsive" src="https://d3u4hzlr7ozpoo.cloudfront.net/assets/banner-image-tours-ef50aa6ecfaf707fcc3ac0b73f418209.jpg" />
+							<img alt="Banner" className="img-responsive" src="https://d3u4hzlr7ozpoo.cloudfront.net/assets/banner-image-tours-ef50aa6ecfaf707fcc3ac0b73f418209.jpg" />
 						</a>
 						<div className="carousel-caption">
 							<a href="/states/goa/tours" target="_blank">
@@ -75,7 +75,7 @@ const HeaderCarousel = function(props) {
 					</div>
 					<div className="item">
 							<a href="/states/goa/rentals" target="_blank">
-								<img alt="Banner-image-rentals" className="img-responsive" src="https://d3u4hzlr7ozpoo.cloudfront.net/assets/banner-image-rentals-43baf9229d62dae9e3a8e7110e39485a.jpg" />
+								<img alt="Banner" className="img-responsive" src="https://d3u4hzlr7ozpoo.cloudfront.net/assets/banner-image-rentals-43baf9229d62dae9e3a8e7110e39485a.jpg" />
 							</a>
 							<div className="carousel-caption">
 								<a href="/states/goa/rentals" target="_blank">
@@ -87,7 +87,7 @@ const HeaderCarousel = function(props) {
 					</div>
 					<div className="item active">
 							<a href="/states/goa/stays" target="_blank">
-								<img alt="Banner-image-stays" className="img-responsive" src="https://d3u4hzlr7ozpoo.cloudfront.net/assets/banner-image-stays-e8568d04a2f8b218be5065e2ae708ffd.jpg" />
+								<img alt="Banner" className="img-responsive" src="https://d3u4hzlr7ozpoo.cloudfront.net/assets/banner-image-stays-e8568d04a2f8b218be5065e2ae708ffd.jpg" />
 							</a>
 							<div className="carousel-caption">
 								<a href="/states/goa/stays" target="_blank">
@@ -99,7 +99,7 @@ const HeaderCarousel = function(props) {
 					</div>
 					<div className="item">
 							<a href="/states/goa/events" target="_blank">
-								<img alt="Banner-image-events" className="img-responsive" src="https://d3u4hzlr7ozpoo.cloudfront.net/assets/banner-image-events-262b169f47085a1e090c92369a3565a3.jpg" />
+								<img alt="Banner" className="img-responsive" src="https://d3u4hzlr7ozpoo.cloudfront.net/assets/banner-image-events-262b169f47085a1e090c92369a3565a3.jpg" />
 							</a>
 							<div className="carousel-caption">
 								<a href="/states/goa/events" target="_blank">
@@ -111,7 +111,7 @@ const HeaderCarousel = function(props) {
 					</div>
 					<div className="item">
 							<a href="/destinations/goa/places-to-visit" target="_blank">
-								<img alt="Banner-image-attractions" className="img-responsive" src="https://d3u4hzlr7ozpoo.cloudfront.net/assets/banner-image-attractions-94bb1192b36f4ec0fccce53a5457fb78.jpg" />
+								<img alt="Banner" className="img-responsive" src="https://d3u4hzlr7ozpoo.cloudfront.net/assets/banner-image-attractions-94bb1192b36f4ec0fccce53a5457fb78.jpg" />
 							</a>
 							<div className="carousel-caption">
 								<a href="/destinations/goa/places-to-visit" target="_blank">

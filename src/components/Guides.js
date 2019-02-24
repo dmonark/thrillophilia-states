@@ -1,11 +1,11 @@
 import React from 'react';
-import CustomCard from './CustomCard';
+import CustomCard from './cards/CustomCard';
 
 const Guides = function(props) {
   var guideList = []
 	for(var i = 0; i < props.data.length; i++){
 		guideList.push(
-			<div className="col-md-3 col-xs-6">
+			<div className="col-md-3 col-xs-6" key={"guides"+i}>
 				<CustomCard cardType="medium"/>
 			</div>
 		)
