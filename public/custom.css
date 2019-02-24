@@ -1,10 +1,13 @@
 .desc-class{
-overflow:hidden; font-size:16px; line-height: 1.5em; height: 7.5em;}
+	overflow:hidden; 
+	font-size:16px; 
+	line-height: 1.5em; 
 }
-#show-more-btn{display: block;
-text-decoration: none;
-color: rgb(241, 111, 50);
-margin-bottom: 30px;
+#show-more-btn{
+	display: block;
+	text-decoration: none;
+	color: rgb(241, 111, 50);
+	margin-bottom: 30px;
 }
 .carousel-title{
 	font-size: 18px
