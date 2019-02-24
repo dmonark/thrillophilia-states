@@ -62,12 +62,12 @@ class Carousel extends Component {
 								{carouselList}
 							</Slider>
 						</div>
-						<a className="carousel-control left corousel-indicator" style={{backgroundImage: 'none', left: '-90px'}} onClick={() => this.slider.slickGoTo(this.state.updateCount - 1)}>
+						<a className="carousel-control left corousel-indicator" style={{backgroundImage: 'none', left: '-90px'}} onClick={() => this.slider.slickGoTo(this.state.slideIndex - 1)}>
 							<span>
 								<i className="fa fa-angle-left indicator-icon" aria-hidden="true"></i>
 							</span>
 						</a>
-						<a className="carousel-control right corousel-indicator" style={{backgroundImage: 'none', right: '-90px'}} onClick={() => this.slider.slickGoTo(this.state.updateCount + 1)}>
+						<a className="carousel-control right corousel-indicator" style={{backgroundImage: 'none', right: '-90px'}} onClick={() => this.slider.slickGoTo(this.state.slideIndex + 1)}>
 							<span>
 								<i className="fa fa-angle-right indicator-icon" aria-hidden="true"></i>
 							</span>

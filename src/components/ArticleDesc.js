@@ -32,7 +32,7 @@ class ArticleDesc extends Component {
 						Often known as the ‘pearl of the east’, Goa has been known across the globe for the warm hospitality, cultural heritage and the endless parties. Whether it is relaxation or adventure, nature or history, shopping or food, or the best places to visit in Goa, it delights all the vacationers with its tangible and intangible allures. Enjoy a spa day to refresh the mind and soul or binge on some spectacular seafood enjoying the view of the sunset. Have a thrilling day by the beach or party all night with the Djs in Goa. 
 					</p>				
 				</div>
-				<a href="#" className="btn-overflow less" id="show-more-btn" onClick={() => this.changeText()}>{this.state.show ? "Show More" : "Show Less"}</a>
+				<a className="btn-overflow less" id="show-more-btn" onClick={() => this.changeText()}>{this.state.show ? "Show More" : "Show Less"}</a>
 			</div>
 	  );
   }

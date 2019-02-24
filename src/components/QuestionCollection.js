@@ -1,20 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
+
+class QuestionAnswer extends Component{
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			show: false
+		};
+	}
+	
+	render() {
+		return (
+			<li className={this.state.show ? null : "active"} onClick={() => this.setState(prevState => ({show: !prevState.show}))}>
+				<div className={this.state.show ? "collapsible-header" : "collapsible-header active"}>
+					{this.props.data.question} 
+					<span className="pull-right">
+						<i className="fa accordion-icon"></i>
+					</span>
+				</div>
+				{
+					this.state.show ? (
+						<p>
+							{this.props.data.answer}
+						</p>
+					) : null
+				}
+			</li>
+		)
+	}
+}
 
 const QuestionCollection = function(props) {
 	var questionList = []
 	for(var i = 0; i < props.data.length; i++){
 		questionList.push(
-			<li key={"faq"+i}>
-				<div className="collapsible-header active">
-					{props.data[i].question} 
-					<span className="pull-right">
-						<i className="fa accordion-icon"></i>
-					</span>
-				</div>
-				<p>
-					{props.data[i].answer}
-				</p>
-			</li>
+			<QuestionAnswer 
+				key={"faq"+i}
+				data={props.data[i]}
+			/>
 		)
 	}
 	return (

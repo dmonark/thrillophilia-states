@@ -36,8 +36,8 @@ class App extends Component {
 					<Reviews />
 					<Handpicked />
 					<div className="nearby-section">
-						<CollectionCarousel title="Nearby Getaways from Goa" carouselName="carousel-nearby-destinations"/>
-						<CollectionCarousel title="Goa Experiences" carouselName="carousel-sub-categories"/>
+						<CollectionCarousel title="Nearby Getaways from Goa" keyText = "nearby" carouselName="carousel-nearby-destinations"/>
+						<CollectionCarousel title="Goa Experiences" keyText = "experiences" carouselName="carousel-sub-categories"/>
 					</div>
 					<TagCollection title="More Things to do in Goa" keyText = "more"/>
 					<TagCollection title="Top Goa Attractions" keyText="topattraction"/>

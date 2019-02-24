@@ -8,7 +8,7 @@ const StarRating = function(props) {
 			<i aria-hidden="true" className={props.rating >= 2 ? 'fa fa-star star-filled' : 'fa fa-star'}></i>
 			<i aria-hidden="true" className={props.rating >= 3 ? 'fa fa-star star-filled' : 'fa fa-star'}></i>
 			<i aria-hidden="true" className={props.rating >= 4 ? 'fa fa-star star-filled' : 'fa fa-star'}></i>
-			<i aria-hidden="true" className={props.rating == 5 ? 'fa fa-star star-filled' : 'fa fa-star'}></i>
+			<i aria-hidden="true" className={props.rating === 5 ? 'fa fa-star star-filled' : 'fa fa-star'}></i>
 			{
 				props.count ? props.count + " Reviews" : null
 			}
